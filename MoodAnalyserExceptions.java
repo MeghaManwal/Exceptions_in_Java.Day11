@@ -1,15 +1,19 @@
 package exceptionTest;
 
 public  class MoodAnalyserException {
-
-	public static String MoodAnalyserException (String message) {
+	
+        static final String message=" ";
+	
+	public static String MoodAnalyserException() {
 		
-		if(message.contains("Sad")) 
-		       return "SAD";
+		if(message.equals("SAD")) 
+		     return "SAD";
 	        else    
-		       return "HAPPY";
+		     return "HAPPY";
 	}
+
 }
+
 
 package exceptionTest;
 
@@ -20,15 +24,19 @@ public class MoodAnalyserExceptionTest {
 
 	@Test
 	public void givenMood_shouldReturnHappy() {
-		String message="I am in Any mood";
-		String mood=MoodAnalyserException.MoodAnalyserException(message);
+		String message="HAPPY";
+		String mood=MoodAnalyserException.MoodAnalyserException();
+		mood=MoodAnalyserException.MoodAnalyserException();
+		System.out.println(mood);
 		assertEquals("HAPPY", mood);
 	}
-	
+
 	@Test
 	public void givenMood_shouldReturnSad() {
-		String message="I am in Happy mood";
-		String mood=MoodAnalyserException.MoodAnalyserException(message);
-		assertEquals("HAPPY", mood);
+		String message="SAD";
+		String mood=MoodAnalyserException.MoodAnalyserException();
+		mood=MoodAnalyserException.MoodAnalyserException();
+		System.out.println(mood);      
+		assertEquals("SAD", mood);
 	}
 }
