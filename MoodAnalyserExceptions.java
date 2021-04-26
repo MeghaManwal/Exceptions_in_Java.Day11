@@ -6,7 +6,7 @@ public  class MoodAnalyserException {
 	
 	public static String MoodAnalyserException() {
 		
-		if(message.equals("SAD")) 
+		if(message.contains("Sad")) 
 		     return "SAD";
 	        else    
 		     return "HAPPY";
@@ -24,7 +24,7 @@ public class MoodAnalyserExceptionTest {
 
 	@Test
 	public void givenMood_shouldReturnHappy() {
-		String message="HAPPY";
+		String message="I am in Happy mood";
 		String mood=MoodAnalyserException.MoodAnalyserException();
 		mood=MoodAnalyserException.MoodAnalyserException();
 		System.out.println(mood);
@@ -33,10 +33,10 @@ public class MoodAnalyserExceptionTest {
 
 	@Test
 	public void givenMood_shouldReturnSad() {
-		String message="SAD";
+		String message="I am in Sad mood";
 		String mood=MoodAnalyserException.MoodAnalyserException();
 		mood=MoodAnalyserException.MoodAnalyserException();
 		System.out.println(mood);      
-		assertEquals("SAD", mood);
+		assertEquals("HAPPY", mood);
 	}
 }
