@@ -17,18 +17,18 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
 public class MoodAnalyserExceptionTest {
-	
+
 	@Test
 	public void givenMood_shouldReturnHappy() {
-		String message="I am in Happy mood";
+		String message="I am in Any mood";
 		String mood=MoodAnalyserException.MoodAnalyserException(message);
 		assertEquals("HAPPY", mood);
 	}
 	
 	@Test
 	public void givenMood_shouldReturnSad() {
-		String message="I am in Sad mood";
+		String message="I am in Happy mood";
 		String mood=MoodAnalyserException.MoodAnalyserException(message);
-		assertEquals("SAD", mood);
+		assertEquals("HAPPY", mood);
 	}
 }
