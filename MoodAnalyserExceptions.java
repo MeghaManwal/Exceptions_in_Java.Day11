@@ -11,9 +11,8 @@ public  class MoodAnalyserException {
 	          else    
 		       return "HAPPY";
 	         } catch (NullPointerException ae) {
-	               ae.printStackTrace();
+	              return "HAPPY";
 	         }
-	    return " ";
 	}
 	
         public static String MoodAnalyserException(String message) {
@@ -23,9 +22,8 @@ public  class MoodAnalyserException {
 	          else    
 		       return "HAPPY";
     	        } catch (NullPointerException ae) {
-	           ae.printStackTrace();
+	           return "HAPPY";
 	        }
-	    return " ";
        }
 }
 
